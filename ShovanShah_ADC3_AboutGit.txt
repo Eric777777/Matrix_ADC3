@@ -1,0 +1,20 @@
+Basic Git Commands
+
+1.Git Clone
+	git clone is a Git command which is used to 
+	target an existing repository and create a clone, 
+	or copy of the target repository.
+2.Git Push	
+	git push is a Git command used to upload 
+	local repository content to a remote repository. 
+3.Git Pull
+	git pull is a Git command used to update the local 
+	version of a repository from a remote.
+4.Merge Conflict
+	Merge conflicts are scenarios that occur when competing 
+	changes are made to the same line of a file, or when one 
+	person edits a file and another person deletes the same file.
+5.Git Commit
+	git commit is a Git command used to save your changes to 
+	the local repository
+	
