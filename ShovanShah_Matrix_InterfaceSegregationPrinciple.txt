@@ -1,0 +1,54 @@
+The Interface Segregation Principle states that clients should not be forced to implement 
+interfaces they don't use. Instead of one big interface, creating many small interfaces is considered good design. 
+Interface should be designed based on groups of methods, each one serving one submodule.
+
+Example of Interface Segragation Principle:
+
+interface IWorker extends Feedable, Workable {
+}
+
+interface IWorkable {
+	public void work();
+}
+
+interface IFeedable{
+	public void eat();
+}
+
+class Worker implements IWorkable, IFeedable{
+	public void work() {
+		// ....working
+	}
+
+	public void eat() {
+		//.... eating in launch break
+	}
+}
+
+class Robot implements IWorkable{
+	public void work() {
+		// ....working
+	}
+}
+
+class SuperWorker implements IWorkable, IFeedable{
+	public void work() {
+		//.... working much more
+	}
+
+	public void eat() {
+		//.... eating in launch break
+	}
+}
+
+class Manager {
+	Workable worker;
+
+	public void setWorker(Workable w) {
+		worker=w;
+	}
+
+	public void manage() {
+		worker.work();
+	}
+}
