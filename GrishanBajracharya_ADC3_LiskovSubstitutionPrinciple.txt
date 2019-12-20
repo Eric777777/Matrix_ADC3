@@ -1,0 +1,86 @@
+Liskov substitution principle
+
+In programming, the Liskov substitution principle states that if S is a subtype of T, then objects of type T may be replaced (or substituted) with objects of type S.
+
+This can be formulated mathematically as
+Let q(x) be a property provable about objects x of type T.
+Then q(y) should be true for objects y of type S, where S is a subtype of T.
+
+More generally it states that objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.
+
+Let's take an example,
+   The LSP is popularly explained using the square and rectangle example. Let’s assume we try to establish an ISA relationship between Square and Rectangle. Thus, we call “Square is a Rectangle.” The code below represents the relationship.
+
+
+public class Rectangle {
+    private int length;
+    private int breadth;
+    public int getLength() {
+        return length;
+    }
+    public void setLength(int length) {
+        this.length = length;
+    }
+    public int getBreadth() {
+        return breadth;
+    }
+    public void setBreadth(int breadth) {
+        this.breadth = breadth;
+    }
+    public int getArea() {
+        return this.length * this.breadth;
+    }
+}
+Below is the code for Square. Note that Square extends Rectangle.
+
+
+public class Square extends Rectangle {
+    @Override
+    public void setBreadth(int breadth) {
+        super.setBreadth(breadth);
+        super.setLength(breadth);
+    }
+    @Override
+    public void setLength(int length) {
+        super.setLength(length);
+        super.setBreadth(length);
+    }
+}
+
+public class LSPDemo {
+
+    public void calculateArea(Rectangle r) {
+        r.setBreadth(2);
+        r.setLength(3);
+        //
+        // Assert Area
+        // 
+        // From the code, the expected behavior is that 
+        // the area of the rectangle is equal to 6
+        //
+        assert r.getArea() == 6 : printError("area", r);
+        //
+        // Assert Length & Breadth
+        //
+        // From the code, the expected behavior is that 
+        // the length should always be equal to 3 and
+        // the breadth should always be equal to 2
+        //
+        assert r.getLength() == 3 : printError("length", r);
+        assert r.getBreadth() == 2 : printError("breadth", r);
+    }
+    private String printError(String errorIdentifer, Rectangle r) {
+        return "Unexpected value of " + errorIdentifer + "  for instance of " + r.getClass().getName();
+    }
+    public static void main(String[] args) {
+        LSPDemo lsp = new LSPDemo();
+        //
+        // An instance of Rectangle is passed
+        //
+        lsp.calculateArea(new Rectangle());
+        //
+        // An instance of Square is passed
+        //
+        lsp.calculateArea(new Square());
+    }
+}
