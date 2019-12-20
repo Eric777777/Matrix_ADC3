@@ -1,0 +1,6 @@
+Git-clone=Clone a repository into a new directory
+Git-push=Update remote refs along with associated objects
+Git-pull=Fetch from and integrate with another repository or a local branch
+Git-merge conflict=Join two or more development histories together
+Git-branches=List, create, or delete branches
+Git-commit=Record changes to the repository
