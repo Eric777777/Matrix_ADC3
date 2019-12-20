@@ -1,2 +1,9 @@
 # Matrix_ADC3
- Eric Joshi, Grishan Bajracharya, Shovan Shah, Rujan Shakya---- Infotainment
+Team Members:
+ Eric Joshi
+ Grishan Bajracharya
+ Shovan Shah
+ Rujan Shakya
+
+Project Name:
+Infotainment
