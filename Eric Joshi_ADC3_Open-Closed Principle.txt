@@ -1,0 +1,21 @@
+Open/ Closed Principle (OCP)
+Classes should be open for extension but closed for modification.
+The Open Close Principle states that the design and writing of the code should be done in a way that new functionality should be added with minimum changes in the existing code.
+The design should be done in a way to allow the adding of new functionality as new classes, keeping as much as possible existing code unchanged.
+Objects or entities should be open for extension, but closed for modification.
+In example:
+ class GraphicEditor {
+ 	public void drawShape(Shape s) {
+ 		s.draw();
+ 	}
+ }
+ 
+ class Shape {
+ 	abstract void draw();
+ }
+ 
+ class Rectangle extends Shape  {
+ 	public void draw() {
+ 		// draw the rectangle
+ 	}
+ } 
