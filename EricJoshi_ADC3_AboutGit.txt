@@ -1,0 +1,24 @@
+git clone:
+git clone is how you get a local copy of an existing repository to work on. It's usually only used once for a given 
+repository, unless you want to have multiple working copies of it around. (Or want to get a clean copy after messing
+up your local one...)
+
+git push:
+The git push command is used to upload local repository content to a remote repository.git push exports commits to 
+remote branches.It ha the potential to overwrite changes so caution should be taken while pushing. 
+
+git pull:
+git pull is how you update that local copy with new commits from the remote repository. If you are collaborating with
+others, it is a command that you will run frequently.
+
+merge conflicts:
+Merge conflicts happen when you merge branches that have competing commits, and Git needsyour help to decide which changes
+to incorporate in final merge.
+
+git branches: 
+git branching functionally helps to create new branches of a project to test ideas, isolate new features, or 
+experiment without impacting main project.
+
+git commit:
+the git commit command captures a snapshot of the project's currentlystaged changes. Committed snapshots can be thought of
+as “safe” versions of a project—Git will never change them unless you explicitly ask it to
