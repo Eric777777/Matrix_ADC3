@@ -6,4 +6,4 @@ Team Members:
  Rujan Shakya
 
 Project Name:
-Infotainment
+Infotainment Manager
