@@ -1,0 +1,6 @@
+1.Git clone is a Git command line utility which is used to target an existing repository and create a clone, or copy of the target repository.
+2.The git push command is used to upload local repository content to a remote repository. Pushing is how you transfer commits from your local repository to a remote repo. It's the counterpart to git fetch , but whereas fetching imports commits to local branches, pushing exports commits to remote branches.
+3.Git pull is a Git command used to update the local version of a repository from a remote.
+4.Merge conflicts happen when you merge branches that have competing commits, and Git needs your help to decide which changes to incorporate in the final merge.
+5.Git’s branching functionality lets you create new branches of a project to test ideas, isolate new features, or experiment without impacting the main project.
+6.The git commit command will save all staged changes, along with a brief description from the user, in a “commit” to the local repository.
