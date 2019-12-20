@@ -1,2 +1,2 @@
 # Matrix_ADC3
- Matrix:
+ Eric Joshi, Grishan Bajracharya, Shovan Shah, Rujan Shakya
